@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.season {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.controls {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.standings-wrapper {
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.standings-table thead {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.standings-table th {
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+.standings-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    color: #2c3e50;
+}
+
+.standings-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.standings-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.standings-table tbody tr.top-four {
+    border-left: 4px solid #4CAF50;
+    background-color: #f1f8f5;
+}
+
+.standings-table tbody tr.european {
+    border-left: 4px solid #FF9800;
+    background-color: #fff8f1;
+}
+
+.standings-table tbody tr.relegation {
+    border-left: 4px solid #f44336;
+    background-color: #fff1f1;
+}
+
+.standings-table tbody tr.loading td {
+    text-align: center;
+    padding: 40px 15px;
+    color: #999;
+}
+
+.team-name {
+    text-align: left;
+    font-weight: 600;
+}
+
+.pos {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+footer {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+    color: #666;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .standings-table th,
+    .standings-table td {
+        padding: 8px 5px;
+        font-size: 0.8em;
+    }
+
+    .team-name {
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        border-radius: 0;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .standings-table th,
+    .standings-table td {
+        padding: 6px 4px;
+        font-size: 0.7em;
+    }
+
+    .controls {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
