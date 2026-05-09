@@ -13,37 +13,43 @@
             <p class="season">2025-2026 Season</p>
         </header>
 
-        <div class="controls">
-            <button id="refreshBtn" class="btn btn-primary">Refresh Data</button>
+        <!-- Main Content (Standings) -->
+        <div id="mainContent">
+            <div class="controls">
+                <button id="refreshBtn" class="btn btn-primary">Refresh Data</button>
+            </div>
+
+            <div class="standings-wrapper">
+                <table class="standings-table" id="standingsTable">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Team</th>
+                            <th>P</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th>GF</th>
+                            <th>GA</th>
+                            <th>GD</th>
+                            <th>Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr class="loading">
+                            <td colspan="10">Loading standings...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <footer>
+                <p>Last updated: <span id="lastUpdated">--:--</span> | Click on a team name to view manager details</p>
+            </footer>
         </div>
 
-        <div class="standings-wrapper">
-            <table class="standings-table" id="standingsTable">
-                <thead>
-                    <tr>
-                        <th>Pos</th>
-                        <th>Team</th>
-                        <th>P</th>
-                        <th>W</th>
-                        <th>D</th>
-                        <th>L</th>
-                        <th>GF</th>
-                        <th>GA</th>
-                        <th>GD</th>
-                        <th>Pts</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <tr class="loading">
-                        <td colspan="10">Loading standings...</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <footer>
-            <p>Last updated: <span id="lastUpdated">--:--</span></p>
-        </footer>
+        <!-- Details Content (Team Manager Info) -->
+        <div id="detailsContent" style="display: none;"></div>
     </div>
 
     <script src="script.js"></script>
