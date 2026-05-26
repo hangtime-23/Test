@@ -3,49 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premier League Standings</title>
+    <title>Movie Watchlist</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Premier League Standings</h1>
-            <p class="season">2025-2026 Season</p>
-        </header>
+    <header>
+        <h1>🎬 My Movie Watchlist</h1>
+    </header>
 
-        <div class="controls">
-            <button id="refreshBtn" class="btn btn-primary">Refresh Data</button>
-        </div>
+    <main>
+        <!-- TO BE WATCHED SECTION -->
+        <section id="to-watch" class="section">
+            <h2>📋 To Be Watched</h2>
+            <div class="movies-grid">
+                <!-- Easy A -->
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTcyMTA5NzA0M15BMl5BanBnXkFtZTcwODkyODk3Mw@@._V1_.jpg" alt="Easy A" class="poster">
+                    <div class="movie-info">
+                        <h3>Easy A</h3>
+                        <p class="type">🎞️ Movie</p>
+                        <p class="genre"><strong>Genre:</strong> Comedy, Romance</p>
+                        <p class="runtime"><strong>Runtime:</strong> 92 minutes</p>
+                        <p class="summary"><strong>Summary:</strong> A high school girl creates a fictional website to help her unpopular classmates become more popular, leading to hilarious consequences.</p>
+                        <p class="cast"><strong>Main Cast:</strong> Emma Stone, Penn Badgley, Amanda Bynes, Thomas Haden Church</p>
+                        <p class="score"><strong>🍅 Rotten Tomatoes:</strong> 85%</p>
+                        <a href="https://www.youtube.com/results?search_query=Easy+A+trailer" target="_blank" class="trailer-btn">Watch Trailer</a>
+                    </div>
+                </div>
 
-        <div class="standings-wrapper">
-            <table class="standings-table" id="standingsTable">
-                <thead>
-                    <tr>
-                        <th>Pos</th>
-                        <th>Team</th>
-                        <th>P</th>
-                        <th>W</th>
-                        <th>D</th>
-                        <th>L</th>
-                        <th>GF</th>
-                        <th>GA</th>
-                        <th>GD</th>
-                        <th>Pts</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <tr class="loading">
-                        <td colspan="10">Loading standings...</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                <!-- This is 40 -->
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTk0OTU0NzUyN15BMl5BanBnXkFtZTcwODc0NjEwOA@@._V1_.jpg" alt="This is 40" class="poster">
+                    <div class="movie-info">
+                        <h3>This is 40</h3>
+                        <p class="type">🎞️ Movie</p>
+                        <p class="genre"><strong>Genre:</strong> Romantic Comedy, Drama</p>
+                        <p class="runtime"><strong>Runtime:</strong> 134 minutes</p>
+                        <p class="summary"><strong>Summary:</strong> A married couple approaching 40 navigate relationship issues, business failures, and the challenges of middle age while raising their two daughters.</p>
+                        <p class="cast"><strong>Main Cast:</strong> Paul Rudd, Leslie Mann, Maude Apatow, Iris Apatow</p>
+                        <p class="score"><strong>🍅 Rotten Tomatoes:</strong> 52%</p>
+                        <a href="https://www.youtube.com/results?search_query=This+is+40+trailer" target="_blank" class="trailer-btn">Watch Trailer</a>
+                    </div>
+                </div>
 
-        <footer>
-            <p>Last updated: <span id="lastUpdated">--:--</span></p>
-        </footer>
-    </div>
+                <!-- Rye Lane -->
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDAwZjlkNWItOWM0ZC00Yzc1LTlkMWItZWY1YTZlZWU2NDAxXkEyXkFqcGdeQXVyMTQxNzMzNTQ@._V1_.jpg" alt="Rye Lane" class="poster">
+                    <div class="movie-info">
+                        <h3>Rye Lane</h3>
+                        <p class="type">🎞️ Movie</p>
+                        <p class="genre"><strong>Genre:</strong> Romantic Comedy, Slice of Life</p>
+                        <p class="runtime"><strong>Runtime:</strong> 82 minutes</p>
+                        <p class="summary"><strong>Summary:</strong> Two twenty-somethings recovering from recent break-ups meet by chance in South London and spend an eventful day bonding over heartbreak and new possibilities for love.</p>
+                        <p class="cast"><strong>Main Cast:</strong> David Jonsson, Vivian Oparah, Poppy Allen-Quarmby, Charlie Knight</p>
+                        <p class="score"><strong>🍅 Rotten Tomatoes:</strong> 98%</p>
+                        <a href="https://www.youtube.com/results?search_query=Rye+Lane+trailer" target="_blank" class="trailer-btn">Watch Trailer</a>
+                    </div>
+                </div>
 
-    <script src="script.js"></script>
+                <!-- Marty Supreme -->
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BN2QyYTBmZWItNGQzOC00ZTczLWE5ZDAtMmJiOTA3MzQ2YmQyXkEyXkFqcGdeQXVyMTUzMTg4Nzk@._V1_.jpg" alt="Marty Supreme" class="poster">
+                    <div class="movie-info">
+                        <h3>Marty Supreme</h3>
+                        <p class="type">🎞️ Movie</p>
+                        <p class="genre"><strong>Genre:</strong> Sports Comedy-Drama, Psychological Thriller</p>
+                        <p class="runtime"><strong>Runtime:</strong> 150 minutes</p>
+                        <p class="summary"><strong>Summary:</strong> Set in the 1950s, an ambitious young table tennis player strives for greatness, battling social prejudice and his own hubris on his quest to become world champion.</p>
+                        <p class="cast"><strong>Main Cast:</strong> Timothée Chalamet, Gwyneth Paltrow, Odessa A'zion, Tyler, the Creator</p>
+                        <p class="score"><strong>🍅 Rotten Tomatoes:</strong> 96%</p>
+                        <a href="https://www.youtube.com/results?search_query=Marty+Supreme+trailer" target="_blank" class="trailer-btn">Watch Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WATCHED SECTION -->
+        <section id="watched" class="section">
+            <h2>✅ Watched</h2>
+            <div class="movies-grid">
+                <!-- Finding Emily -->
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDdlYzE2NzctZmM3ZS00ZWYzLTk4NzItMzc4MjJlZGI4YzcyXkEyXkFqcGdeQXVyMTQxNzMzNTQ@._V1_.jpg" alt="Finding Emily" class="poster">
+                    <div class="movie-info">
+                        <h3>Finding Emily</h3>
+                        <p class="type">🎞️ Movie</p>
+                        <p class="genre"><strong>Genre:</strong> Romantic Comedy</p>
+                        <p class="runtime"><strong>Runtime:</strong> 111 minutes</p>
+                        <p class="summary"><strong>Summary:</strong> When a lovesick musician is given the wrong number for his dream girl, he teams up with a driven psychology student to find her, sparking a hilarious campus-wide frenzy.</p>
+                        <p class="cast"><strong>Main Cast:</strong> Angourie Rice, Spike Fearn, Minnie Driver, Sadie Soverall</p>
+                        <p class="score"><strong>🍅 Rotten Tomatoes:</strong> 100%</p>
+                        <a href="https://www.youtube.com/results?search_query=Finding+Emily+trailer" target="_blank" class="trailer-btn">Watch Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Movie Watchlist. Enjoy your movies!</p>
+    </footer>
 </body>
 </html>
