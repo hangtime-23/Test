@@ -1,5 +1,5 @@
 // OMDb API Configuration
-const OMDB_API_KEY = 'YOUR_OMDB_API_KEY_HERE'; // Replace with your actual OMDb API key
+const OMDB_API_KEY = '26fa137a'; // Replace with your actual OMDb API key
 const OMDB_API_URL = 'https://www.omdbapi.com/';
 
 // Fetch movie posters from OMDb API
