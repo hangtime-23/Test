@@ -1,6 +1,7 @@
 // OMDb API Configuration
 const OMDB_API_KEY = '26fa137a'; // Replace with your actual OMDb API key
 const OMDB_API_URL = 'https://www.omdbapi.com/';
+const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'; // CORS proxy
 
 // Fetch movie posters from OMDb API
 async function loadMoviePosters() {
@@ -13,7 +14,8 @@ async function loadMoviePosters() {
             const data = await response.json();
             
             if (data.Response === 'True' && data.Poster && data.Poster !== 'N/A') {
-                img.src = data.Poster;
+                // Use CORS proxy for the poster URL
+                img.src = CORS_PROXY + data.Poster;
             } else {
                 // Fallback to placeholder if poster not found
                 img.src = 'https://via.placeholder.com/300x450?text=No+Poster+Available';
